@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<style>
+    #body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px black;
+    }
+
+
+  
+</style>
+
+
+<h1>Agendamentos</h1>
+
+<div id="body">
+
+    <form action="{{url_for('agendar')}}" method='POST'>
+
+        <div>
+            <label for="nome">nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div>
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+<div>
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" name="telefone" required>
+</div>
+
+<div>
+    <label for="data">Data:</label>
+    <input type="date" id="data" name="data" required>
+</div>
+
+<div>
+    <label for="hora">Hota:</label>
+    <input type="time" id="hora" name="hora" required>
+</div>
+
+<div>
+    <label for="serviço">serviço:</label>
+    <select name="area" id="area">
+    <option value="Opções">Opções</option>
+    <option value="assistencia">assistencia tecnica</option>
+    <option value="venda">compra de produtos</option>
+    <option value="desistencia">devolução</option>
+    <option value="ouvidoria">reclamação</option>
+    </select>
+</div>
+
+<div>
+    <input type="submit" value="enviar">
+</div>
+
+</form>
+
+
+</div>
+
+
+{% endblock %}

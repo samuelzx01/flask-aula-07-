@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+<div>
+        <h2>Serviço confirmado</h2>
+        <h3>prezado(a) {{dadosServicos.nome}}</h3>
+        <h3>esta confirmado o seu horario para {{dadosServicos.data}} as {{dadosServicos.hora}}</h3>
+        <a href="{{url_for('agendar')}}">voltar</a>
+</div>
+
+
+
+{% endblock %}
